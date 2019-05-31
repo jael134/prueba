@@ -23,7 +23,7 @@ DATABASE_URL = "postgres+psycopg2://{user}:{password}@{host}:{port}/{dbname}".fo
 engine = create_engine(DATABASE_URL)
 
 
-#%%order_book = pd.read_sql_table('order_book', con=engine, schema='public')
+%%order_book = pd.read_sql_table('order_book', con=engine, schema='public')
 
 %%
 market_history_query = """
