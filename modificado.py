@@ -25,18 +25,18 @@ engine = create_engine(DATABASE_URL)
 
 #%%order_book = pd.read_sql_table('order_book', con=engine, schema='public')
 
-#%%
-# market_history_query = """
-# select
-#   *
-# from
-#   raw.market_history
-# where
-#   date_trunc('day', time_stamp) >= date('2018-07-16')
-#   and date_trunc('day', time_stamp) <= date('2018-07-16')
-#   and market = 'USDT-BTC'
-#   ORDER BY time_stamp DESC;
-# """
+%%
+market_history_query = """
+select
+  *
+from
+  raw.market_history
+where
+  date_trunc('day', time_stamp) >= date('2018-07-16')
+  and date_trunc('day', time_stamp) <= date('2018-07-16')
+  and market = 'USDT-BTC'
+  ORDER BY time_stamp DESC;
+"""
 #
 market_history = pd.read_sql(market_history_query, con=engine)
 market_history.to_csv('market_history.csv')
