@@ -38,8 +38,8 @@ engine = create_engine(DATABASE_URL)
 #   ORDER BY time_stamp DESC;
 # """
 #
-# market_history = pd.read_sql(market_history_query, con=engine)
-# market_history.to_csv('market_history.csv')
+market_history = pd.read_sql(market_history_query, con=engine)
+market_history.to_csv('market_history.csv')
 
 
 
