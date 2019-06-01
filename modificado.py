@@ -20,7 +20,7 @@ DATABASE_URL = "postgres+psycopg2://{user}:{password}@{host}:{port}/{dbname}".fo
     dbname=DATABASE_NAME
 )
 
-# engine = create_engine(DATABASE_URL)
+engine = create_engine(DATABASE_URL)
 #
 #
 # %%order_book = pd.read_sql_table('order_book', con=engine, schema='public')
